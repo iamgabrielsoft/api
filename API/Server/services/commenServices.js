@@ -61,8 +61,18 @@ const createCommentForPost = async (commentData) => {
 
 
 const findPostForComment = async () => {
-    
+    try {
+        const comments = await Comments.findAll({
+            where: { commentId }, 
+         
+        }, {logging: true})
+
+        console.log(comments)
+    } catch (error) {
+        console.log(error)
+    }
 }
+
 
 
 /**
@@ -86,5 +96,6 @@ const deleteOneComment = async (queryOption = {}) => {
 module.exports = {
     getSingleComment,
     createCommentForPost, 
-    deleteOneComment
+    deleteOneComment, 
+    findPostForComment
 }
