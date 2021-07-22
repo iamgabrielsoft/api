@@ -2,9 +2,10 @@
 
 const { signup, signin } = require("../controllers/authentication");
 const { channelPost, getChannelPost, getAllChannelAvailable} = require("../controllers/channelController");
-const { createComment } = require("../controllers/commentController");
+const { createComment, getComments } = require("../controllers/commentController");
 const { getAllUsers, getUser } = require("../controllers/userController");
 const  { 
+   
     verifyUniqueUserEmail, 
     validateSignupFormData, 
     verifyUniqueUsername, 
@@ -33,6 +34,7 @@ const initRoutes = (app) => {
     //COMMENT API
 
     app.post('/api/v1/:channel/comment', createComment)
+    app.get('/api/v1/:username/:channel/comment', getComments)  //get a comment for each channel post
 }    
    
     

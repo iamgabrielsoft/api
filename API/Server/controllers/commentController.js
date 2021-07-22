@@ -5,7 +5,7 @@
  */
 
 const { respondWithWarning, respondWithSuccess } = require("../helpers/responseHandler");
-const { createCommentForPost } = require("../services/commenServices");
+const { createCommentForPost, findPostForComment } = require("../services/commenServices");
 
 /**
  * Create a comment for a post
@@ -49,7 +49,7 @@ const deleteComment = async (req, res) => {
  * @returns {object} json response
  */
 const getComments = async (req, res) => {
-
+  findPostForComment()
 }
 
 module.exports = {
