@@ -1,0 +1,31 @@
+{
+  "name": "circada",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./Server/server.js",
+  "scripts": {
+    "test": "testing folder"
+  },
+  "keywords": [
+    "codeflare"
+  ],
+  "author": "codeflare",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/register": "^7.14.5",
+    "@hapi/joi": "^17.1.1",
+    "bcryptjs": "^2.4.3",
+    "cookies": "^0.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "keygrip": "^1.1.0",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "sequelize-cli": "^6.2.0",
+    "sequelizer": "^1.1.4"
+  }
+}
